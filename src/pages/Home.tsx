@@ -94,7 +94,7 @@ export const Home = (props: IProps): JSX.Element => {
     setTimeout(() => setCopiedTooltip(false), 1000);
   }, [props.address]);
 
-	if (!props.pair.address) {
+	if (!props.address) {
 		return (
 			<PageLayout center={true}>
 				<MainTitle
