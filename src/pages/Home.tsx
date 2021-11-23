@@ -68,6 +68,10 @@ export const Home = (props: IProps): JSX.Element => {
 	useEffect(() => { setup(setProvider, setWC, props.setAddress, props.setSigner); }, [props.setAddress, props.setSigner])
 
   async function handleClick() {
+		if (!provider) {
+			await setup(setProvider, setWC, props.setAddress, props.setSigner);
+		}
+
 		const p = (isWC) ? provider : null
 		const { address, signer } = await providerUtil.getAddressAndSigner(p);
 		props.setAddress(address);
