@@ -30,7 +30,7 @@ const QRCodeModal = (props) => {
 	};
 
 	const closeQRCodeHandler = () => {
-		video.stop();
+		video.pause();
 		video.src = "";
 		localStream.getTracks().forEach(track => track.stop())
 		setQRCodeModal(false);
