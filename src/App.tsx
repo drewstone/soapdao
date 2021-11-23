@@ -9,7 +9,7 @@ const storageKey = 'theme';
 const themes = {
   light: {
     foreground: '#000',
-    background: '#FFF',
+    background: '#7cface',
     gray: '#666',
     link: '#0070F3',
     bordrColor: '#EAEAEA'
@@ -28,17 +28,9 @@ function App() {
   const [keyring, setKeyring] = useState(new Keyring({ ss58Format: 42, type: 'ed25519' }));
   const [address, setAddress] = useState({});
   const [signer, setSigner] = useState({});
-  const [pair, setPair] = useState({});
   
   const [isDark, setDark] = useState(true);
   const theme = themes[isDark ? 'dark' : 'light'];
-
-  useEffect(() => {
-    const keypairJSON = localStorage.getItem('substrate-keypair') || '';
-    if (keypairJSON) {
-      setPair(keyring.addFromJson(JSON.parse(keypairJSON)));
-    }
-  }, [keyring]);
 
   const setTheme = (theme: string) => {
     setDark(theme !== 'light');
@@ -49,7 +41,6 @@ function App() {
 
   const props = {
     toggleTheme, theme,
-    pair, setPair,
     address, setAddress,
     signer, setSigner,
     keyring, isDark

@@ -17,10 +17,6 @@ body {
 	align-items: center;
 }
 
-.vsc-initialized {
-	background-color: #7cface;
-}
-
 main {
 	flex: 1;
 	display: flex;
