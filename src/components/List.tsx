@@ -1,6 +1,7 @@
+/* eslint-disable jsx-a11y/accessible-emoji */
 import React from 'react';
 import styled from 'styled-components';
-import { ButtonGroup, Button, Grid } from '@geist-ui/react';
+import { Grid } from '@geist-ui/react';
 import Card from 'src/components/ListItem';
 
 const ScrollableButtons = styled('ul')`

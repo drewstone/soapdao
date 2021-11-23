@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState, useEffect, useCallback } from 'react';
 import styled from 'styled-components';
 import { useHistory } from 'react-router-dom';
-import { Spacer, User, Description, Grid, Tooltip } from '@geist-ui/react';
+import { Spacer, Description, Grid, Tooltip } from '@geist-ui/react';
 import PrimaryButton from 'src/components/PrimaryButton';
 import ButtonGroup from 'src/components/ButtonGroup';
 import AddAppButton from 'src/components/AddAppButton';
@@ -17,7 +18,6 @@ import { KeyringPair } from '@polkadot/keyring/types';
 import ClaimWithTokenModal from 'src/modals/ClaimWithToken';
 import * as providerUtil from 'src/controllers/provider';
 import { setup } from 'src/utils/web3modalProviders';
-import { propTypes } from 'react-bootstrap/esm/Image';
 
 const StatsContainer = styled('div')`
 	display: flex;
@@ -65,7 +65,7 @@ export const Home = (props: IProps): JSX.Element => {
 	);
 	const [copiedTooltip, setCopiedTooltip] = useState(false);
 
-	useEffect(() => { setup(setProvider, setWC, props.setAddress, props.setSigner); }, [])
+	useEffect(() => { setup(setProvider, setWC, props.setAddress, props.setSigner); }, [props.setAddress, props.setSigner])
 
   async function handleClick() {
 		const p = (isWC) ? provider : null

@@ -1,10 +1,10 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 /* eslint-disable-next-line @typescript-eslint/ban-ts-comment */
 // @ts-nocheck
 import React, { useState, useEffect } from 'react';
 // copied from https://github.com/tannerkrewson/spyfall/blob/dev/components/AddAppButton.js
-import PrimaryButton from './PrimaryButton';
 import { logEvent } from '../utils/analytics';
 
 // https://github.com/chrisdancee/react-ios-pwa-prompt/issues/32#issuecomment-586762839
@@ -39,7 +39,7 @@ const AddAppButton = () => {
             // Stash the event so it can be triggered later.
             setDeferredPrompt(e);
         });
-    });
+    }, []);
 
     const handleAddApp = () => {
         setIsLoading(true);

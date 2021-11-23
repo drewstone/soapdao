@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/accessible-emoji */
 import { Loading } from "@geist-ui/react";
 import React, { useState } from "react";
 

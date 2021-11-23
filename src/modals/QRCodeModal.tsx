@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // @ts-nocheck
 import React, { useEffect, useState, useRef } from 'react';
 import { Modal, Button, Tabs } from '@geist-ui/react';
@@ -47,7 +48,7 @@ const QRCodeModal = (props) => {
 			setOutputData(document.getElementById("outputData"))
 			setBtnScanQR(document.getElementById("btn-scan-qr"))
 		}, 1000);
-	}, []);
+	}, [canvasElement]);
 	
 	let scanning = false;
 	

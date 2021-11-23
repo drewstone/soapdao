@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import { GeistProvider, CssBaseline } from '@geist-ui/react'
 import Keyring from '@polkadot/keyring';
@@ -37,7 +38,7 @@ function App() {
     if (keypairJSON) {
       setPair(keyring.addFromJson(JSON.parse(keypairJSON)));
     }
-  }, []);
+  }, [keyring]);
 
   const setTheme = (theme: string) => {
     setDark(theme !== 'light');

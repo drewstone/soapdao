@@ -1,6 +1,6 @@
 // @ts-nocheck
 import React, { useState } from 'react';
-import { Modal, Button, Grid, Input, Spacer, Text, ButtonGroup, PrimaryButton } from '@geist-ui/react';
+import { Modal, Button, Grid, Input, Spacer, Text } from '@geist-ui/react';
 
 const ClaimWithTokenModal = (props) => {
 	const [modalOpen, setModalOpen] = useState(false);
