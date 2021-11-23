@@ -1,0 +1,33 @@
+/* remove text-transform from "Description" element and buttons */
+dl.remove-text-transform dt,
+.btn .text {
+		text-transform: none;
+}
+
+/* fixes a weird geist bug where the dashes of unordered list move when you scroll */
+.container ul li:before {
+		margin-right: 0.5em;
+		position: initial;
+		content: "•";
+}
+
+/* "Copied!" tooltip animation */
+#geist-ui-tooltip .tooltip-content.transition-enter {
+		opacity: 0;
+}
+#geist-ui-tooltip .tooltip-content.transition-enter-active {
+		transition: opacity 0.2s ease-out;
+		opacity: 1;
+}
+#geist-ui-tooltip .tooltip-content.transition-leave {
+		opacity: 1;
+}
+#geist-ui-tooltip .tooltip-content.transition-leave-active {
+		transition: opacity 0.2s ease-out;
+		opacity: 0;
+}
+
+.btn-col .btn.btn {
+		padding: 0 1.1em;
+		min-width: initial;
+}
